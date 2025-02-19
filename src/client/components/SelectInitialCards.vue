@@ -275,9 +275,12 @@ export default (Vue as WithRefs<Refs>).extend({
       if (this.hasPrelude) {
         if (this.selectedPreludes.length < 2) {
           this.warning = 'Select 2 preludes';
+        if (this.selectedPreludes.length < 4) {
+          this.warning = 'Select 4 preludes';
           return false;
         }
         if (this.selectedPreludes.length > 2) {
+        if (this.selectedPreludes.length > 4) {
           this.warning = 'You selected too many preludes';
           return false;
         }
